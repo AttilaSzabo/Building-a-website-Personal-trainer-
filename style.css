@@ -5,11 +5,10 @@
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
-    font-family: 'Open Sans', sans-serif;
 }
 
 :root {
-    --color: rgb(235, 195, 95);
+    --color: rgb(204, 159, 46);
     --dim_white: rgb(165, 163, 163);
 }
 
@@ -22,7 +21,9 @@ header {
     color: white;
 }
 
+
 /**********  Header container  /**********/
+
 
 .header_container {
     display: flex;
@@ -91,19 +92,12 @@ header {
 }
 
 
-
-
-
 /**********  Header text  /**********/
 
 
 .header_text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    height: 50%;
+    height: 700px;
     display: flex;
     justify-content: space-around;
 }
@@ -126,8 +120,8 @@ header {
 
 .inner_box h2{
     font-size: 3.5rem;
+    font-weight: 600;
     margin-bottom: 50px;
-    text-shadow: 0 0 5px var(--dim_white);
 }
 
 .inner_box p {
@@ -140,11 +134,11 @@ header {
 .inner_box .button {
     border: none;
     background: none;
-    background-color: var(--color);
-    color: rgb(20, 20, 20);
+    color: var(--color);
     text-transform: uppercase;
     width: 150px;
     font-weight: 700;
+    border: 1px solid var(--dim_white);
     cursor: pointer;
     font-size: 1rem;
     height: 40px;
@@ -154,7 +148,8 @@ header {
 
 .inner_box .button:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 5px white;
+    background-color: var(--color);
+    color: black;
 }
 
 .box2 {
@@ -166,13 +161,79 @@ header {
     border-radius: 10px;
 }
 
+
+/**********  Attention text  /**********/
+
+
+.attention_container {
+    width: 80%;
+    height: 100%;
+    padding: 40px 30px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    transform: translateY(-70px);
+}
+
+.attention_container .p_1{
+    color: var(--color);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.attention_container .h_2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.attention_container .p_2 {
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.attention_container .button {
+    border: none;
+    background: none;
+    background-color: var(--color);
+    color: black;
+    text-transform: uppercase;
+    width: 150px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 40px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.attention_container .button:hover {
+    transform: translateY(-10px);
+    background: none;
+    border: 1px solid var(--color);
+}
+
+
+/**********  About me  /**********/
+
+
+
+
+
 /*******************************************************************************************/
+
 
 @media only screen and (max-width: 1200px) {
 
+    header {
+        height: 750px
+    }
+
     /**********  Inner text  /**********/
 
-    .inner_box h2{
+    .inner_box h2,
+    .attention_container .h_2{
         font-size: 2.5rem;
     }
 }
@@ -181,15 +242,28 @@ header {
 
     /* Inner text */
 
-    .inner_box h2{
+    .inner_box h2,
+    .attention_container .h_2{
         font-size: 2rem;
     }
+
+
+    /**********  Attention text  /**********/
+
+    .attention_container {
+        width: 95%;
+    }
+
     
 }
 
 @media only screen and (max-width: 768px) {
 
     /**********  Header container  /**********/
+
+    header {
+        height: 930px;
+    }
 
     .header_container h2 {
         z-index: 2;
@@ -218,7 +292,6 @@ header {
     }
 
 
-
     /**********  Hamburer  /**********/
 
 
@@ -231,12 +304,13 @@ header {
     }
 
 
-
     /**********  Inner text  /**********/
+
 
     .header_text {
         flex-direction: column-reverse;
         align-items: center;
+        height:800px;
     }
 
     .box1 {
@@ -248,8 +322,7 @@ header {
     }
 
     .box2 img {
-        position: relative;
-        z-index: -1;
+        height: 100%;
     }
 
     .inner_box {
@@ -261,11 +334,13 @@ header {
         margin-bottom: 20px;
     }
 
-    .inner_box p {
+    .inner_box p,
+    .attention_container .p_2 {
         font-size: 0.9rem;
     }
 
-    .inner_box .button {
+    .inner_box .button,
+    .attention_container .button  {
         width: 120px;
         height: 30px;
         font-size: 0.7rem;
@@ -275,13 +350,35 @@ header {
 
 @media only screen and (max-width: 376px) {
 
+
+    header {
+        height: 700px;
+    }
+
     /**********  Inner text  /**********/
 
     .header_text {
         top: 40%;
+        height: 580px;
+    }
+
+    .inner_box {
+        width: 100%;
+        text-align: center;
     }
     
-    .inner_box h2 {
+    .inner_box h2,
+    .attention_container .h_2 {
         font-size: 1.5rem;
+    }
+
+
+    /**********  Attention text  /**********/
+
+
+    .attention_container {
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px 5px;
     }
 }
