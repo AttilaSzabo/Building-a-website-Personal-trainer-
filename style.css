@@ -218,7 +218,20 @@ header {
 /**********  About me  /**********/
 
 
+.about_container {
+    display: flex;
+    justify-content: space-between;
+    height: 800px;
+    border: 1px solid black;
 
+}
+
+.about_box {
+    border: 1px solid black;
+    height: 100%;
+    width: 50%;
+    margin: 10px;
+}
 
 
 /*******************************************************************************************/
