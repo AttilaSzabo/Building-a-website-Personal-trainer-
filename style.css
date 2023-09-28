@@ -133,7 +133,8 @@ header {
     color: var(--dim_white);
 }
 
-.inner_box .button {
+.inner_box .button,
+.options_text .button {
     border: none;
     background: none;
     color: var(--color);
@@ -148,7 +149,8 @@ header {
     transition: 0.3s ease-in-out;
 }
 
-.inner_box .button:hover {
+.inner_box .button:hover,
+.options_text .button:hover {
     transform: translateY(-10px);
     background-color: var(--color);
     color: black;
@@ -228,7 +230,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(240,240,240);
+    background-color: rgb(41, 41, 41);
 }
 
 .about_box {
@@ -261,7 +263,7 @@ header {
     height: 100%;
     border-radius: 10px;
     position: absolute;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 5px rgba(196, 196, 196, 0.1);
     transition: 0.3s;
 }
 
@@ -301,6 +303,7 @@ header {
     font-weight: 600;
     margin: 40px 0 80px 0;
     line-height: 40px;
+    color: white;
 }
 
 .about_box .p_1 {
@@ -308,6 +311,7 @@ header {
     width: 90%;
     font-size: 1.1rem;
     line-height: 25px;
+    color: var(--dim_white);
 }
 
 .about_box .p_2 {
@@ -315,7 +319,90 @@ header {
     font-size: 1.1rem;
     width: 80%;
     line-height: 25px;
+    color: var(--dim_white);
 }
+
+
+/**********  Our services  /**********/
+
+
+.our_services_container {
+    background-color: rgb(230, 216, 216);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.our_services_container p{
+    color: var(--color);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.our_services_container h2{
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.our_services_box {
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.options_box {
+    width: 340px;
+    height: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(41, 40, 40);
+}
+
+.options_picture {
+    width: 100%;
+    height: 40%;
+}
+
+.options_picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.options_text {
+    width: 100%;
+    height: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.options_text h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.our_services_container .options_text p {
+    color: var(--dim_white);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.our_services_container .button {
+    margin-top: 10px;
+}
+
+
 
 /*******************************************************************************************/
 
@@ -328,13 +415,21 @@ header {
 
     /**********  Inner text  /**********/
 
+
     .inner_box h2,
     .attention_container .h_2{
         font-size: 2.5rem;
     }
 
 
-    /**********  About me  /**********/
+    /**********  Our services  /**********/
+
+
+    .our_services_box {
+        width: 99%;
+        flex-wrap: wrap;
+    }
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -342,7 +437,8 @@ header {
     /* Inner text */
 
     .inner_box h2,
-    .attention_container .h_2{
+    .attention_container .h_2,
+    .our_services_container h2{
         font-size: 2rem;
     }
 
@@ -465,7 +561,8 @@ header {
     }
 
     .inner_box .button,
-    .attention_container .button  {
+    .attention_container .button,
+    .options_box .button  {
         width: 120px;
         height: 30px;
         font-size: 0.7rem;
@@ -475,15 +572,39 @@ header {
     /**********  About me  /**********/
 
 
+    .about_container {
+        margin-top: 0;
+        padding: 20px 0;
+    }
+
+
     .image_box {
         width: 400px;
+        height: 350px;
     }
 
     .about_box .p_1,
     .about_box .p_2 {
         font-size: 0.9rem;
     }
+
+    .image_box:hover img:nth-child(odd) {
+        right: calc(5px*var(--i));
+        bottom: calc(5px*var(--i));
+    }
     
+    .image_box:hover img:nth-child(even) {
+        left: calc(5px*var(--i));
+        top: calc(5px*var(--i));
+    }
+
+
+    /**********  Our services  /**********/
+
+    
+    .options_box {
+        width: 99%;
+    }
 }
 
 @media only screen and (max-width: 376px) {
@@ -506,7 +627,8 @@ header {
     }
     
     .inner_box h2,
-    .attention_container .h_2 {
+    .attention_container .h_2,
+    .our_services_container h2 {
         font-size: 1.5rem;
     }
 
@@ -529,6 +651,15 @@ header {
         padding: 0;
     }
 
+    .image_box:hover img:nth-child(odd) {
+        right: calc(0px*var(--i));
+        bottom: calc(0px*var(--i));
+    }
+    
+    .image_box:hover img:nth-child(even) {
+        left: calc(0px*var(--i));
+        top: calc(0px*var(--i));
+    }
 
     .about_box {
         padding: 10px;
@@ -544,16 +675,6 @@ header {
         height: 300px;
     }
 
-    .image_box:hover img:nth-child(odd) {
-        right: calc(2px*var(--i));
-        bottom: calc(2px*var(--i));
-    }
-    
-    .image_box:hover img:nth-child(even) {
-        left: calc(2px*var(--i));
-        top: calc(2px*var(--i));
-    }
-
     .about_box h2 {
         font-size: 1.5rem;
     }
@@ -561,5 +682,18 @@ header {
     .about_box .p_1,
     .about_box .p_2 {
         line-height: 20px;
+    }
+
+
+    /**********  Our services  /**********/
+
+
+    .our_services_box {
+        padding: 0;
+        margin: 0;
+    }
+
+    .options_text {
+        padding: 10px;
     }
 }
