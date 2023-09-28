@@ -456,7 +456,7 @@ header {
     width: 80%;
     height: 3px;
     background-color: rgb(46, 46, 46);
-    bottom: 70px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 30%;
@@ -517,7 +517,9 @@ header {
 
     .inner_box h2,
     .attention_container .h_2,
-    .our_services_container h2{
+    .our_services_container h2,
+    .opinion_container h2,
+    .about_box h2{
         font-size: 2rem;
     }
 
@@ -539,10 +541,6 @@ header {
     .about_box {
         width: 95%;
         text-align: center;
-    }
-
-    .about_box h2 {
-        font-size: 2rem;
     }
 
     .about_box .p_1,
@@ -684,6 +682,21 @@ header {
     .options_box {
         width: 99%;
     }
+
+     
+    /**********  Opinions about me  /**********/
+
+
+    .person {
+        width: 100%;
+        height: 100%;
+    }
+
+    .opinion_text p::before {
+        bottom: -5px;
+     
+    }
+
 }
 
 @media only screen and (max-width: 376px) {
@@ -707,7 +720,9 @@ header {
     
     .inner_box h2,
     .attention_container .h_2,
-    .our_services_container h2 {
+    .our_services_container h2,
+    .about_box h2,
+    .opinion_container h2 {
         font-size: 1.5rem;
     }
 
@@ -745,10 +760,6 @@ header {
         width: 99%;
     }
 
-    .about_box h2 {
-        margin: 10px 0;
-    }
-
     .image_box {
         width: 100%;
         height: 300px;
@@ -775,4 +786,26 @@ header {
     .options_text {
         padding: 10px;
     }
+
+
+    /**********  Opinions about me  /**********/
+
+    
+    .opinion_container {
+        padding: 10px 0;
+    }
+
+    .picture_of_persons {
+        width: 80px;
+    }
+
+    .opinion_text h3 {
+        margin: 10px 0;
+    }
+
+    .opinion_text p {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+
 }
