@@ -403,6 +403,85 @@ header {
 }
 
 
+/**********  Opinions about me  /**********/
+
+
+.opinion_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.opinion_persons {
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.person {
+    height: 500px;
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgb(187, 186, 186);
+}
+
+.picture_of_persons {
+    height: 20%;
+    width: 100px;
+}
+
+.picture_of_persons img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.opinion_text {
+    height: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.opinion_text p::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background-color: rgb(46, 46, 46);
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30%;
+}
+
+.opinion_text h3 {
+    margin: 20px 0 40px 0;
+    font-size: 1.5rem;
+}
+
+.opinion_text p {
+    line-height: 1.8;
+}
+
+.opinion {
+    color: var(--color);
+    font-weight: 600;
+    font-size: 1.3rem;
+} 
+
+.opinion_container h2 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
 
 /*******************************************************************************************/
 
