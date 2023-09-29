@@ -14,14 +14,14 @@
 <body>
     <header>
 
-        <div class="header_container">
+        <div id="home" class="header_container">
             <h2>LOGÓ</h2>
             <ul class="header_box">
                 <li class="header_item">
-                    <a href="">Kezdőlap</a>
-                    <a href="">Rólunk</a>
-                    <a href="">Árak</a>
-                    <a href="">Referenciák</a>
+                    <a href="#home">Kezdőlap</a>
+                    <a href="#about">Rólunk</a>
+                    <a href="#whyme">Miért mi</a>
+                    <a href="#opinion">Referenciák</a>
                     <a href="">Kapcsolatok</a>
                 </li>
             </ul>
@@ -56,7 +56,7 @@
             <button class="button">Bővebben</button>
         </div>
 
-        <div class="about_container">
+        <div id="about" class="about_container">
             <div class="about_box about_box_img">
                 <div class="image_box">
                     <img src="./images/fitnes_room.jpg" alt="" style="--i: 1;">
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div class="our_services_container">
+        <div id="whyme" class="our_services_container">
             <p>Szolgálltatásaink</p>
             <h2>Amiben segíteni tudunk!</h2>
             <div class="our_services_box">
@@ -112,7 +112,7 @@
             </div>
         </div>
 
-        <div class="opinion_container">
+        <div id="opinion" class="opinion_container">
             <p class="opinion">Vélemények</p>
             <h2>Rólam mondták</h2>
             <div class="opinion_persons">
@@ -146,9 +146,33 @@
             </div>
         </div>
 
+        <div class="please_contact">
+            <p>Mire vársz?</p>
+            <h2>Vedd fel velem a kapcsolatot!</h2>
+        </div>
+
     </main>
+
     <footer>
-        <div class="margin_botton"></div>
+
+        <div class="contact_information">
+            <div class="contact_box flex_start">
+                <div class="contact_text border_botton">
+                    <p class="contact">Elérhetőségeim</p>
+                    <h3>Kress fel!</h3>
+                    <p class="border_bottom">Vedd fel velem a kapcsolatot az alábbi elérhetőségeim egyikén és építsük fel együtt a testet, amire vágysz! 06:00-20:00-ig bármikor hívhatsz!</p>
+                </div>
+                <div class="contact_text">
+                    <ul>
+                        <li>Skype: fitnes.fitnes</li>
+                        <li>Telefonszám: (+421) 9 11 297 305/li>
+                        <li>Email: aatilaszabo@linditex.eu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact_box"></div>
+        </div>
+
     </footer>
     <script src="./script.js"></script>
 </body>
