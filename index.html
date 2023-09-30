@@ -170,7 +170,31 @@
                     </ul>
                 </div>
             </div>
-            <div class="contact_box"></div>
+
+            <div class="contact_box formspree_container">
+                <p>Beszéljünk!</p>
+                <h3>Írj nekünk üzenetet!</h3>
+                <form class="contact_formspree" action="">
+                    <div class="formspree_box vezeteknev">
+                        <label>Vezetéknén</label>
+                        <input type="text" name="Veztéknév" required>
+                    </div>
+                    <div class="formspree_box keresztnev">
+                        <label>Keresztnév</label>
+                        <input type="text" name="Keresztnév" required>
+                    </div>
+                    <div class="formspree_box email">
+                        <label>E-mail cím</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="formspree_box text">
+                        <label>Miben segíthetünk?</label>
+                        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <button class="button">ÜZENET KÜLDÉSE</button>
+                </form>
+
+            </div>
         </div>
 
     </footer>
