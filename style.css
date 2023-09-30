@@ -611,6 +611,28 @@ header {
 }
 
 
+/**********  Link container  /**********/
+
+
+.link_container {
+    background-color: rgb(41,41,41);
+    height: 450px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.link_box {
+    border: 1px solid white;
+    width: 350px;
+}
+
+.link_box h3 {
+    color: var(--color);
+}
+
+
+
 /*******************************************************************************************/
 
 
@@ -619,6 +641,7 @@ header {
     header {
         height: 750px
     }
+
 
     /**********  Inner text  /**********/
 
@@ -637,17 +660,29 @@ header {
         flex-wrap: wrap;
     }
 
+
+    /**********  Contact formspree  /**********/
+
+
+    .contact_formspree {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 992px) {
 
     /* Inner text */
 
+
     .inner_box h2,
     .attention_container .h_2,
     .our_services_container h2,
     .opinion_container h2,
-    .about_box h2{
+    .about_box h2,
+    .please_contact h2,
+    .contact_text h3,
+    .formspree_container h3
+    {
         font-size: 2rem;
     }
 
@@ -681,6 +716,17 @@ header {
     }
 
     
+    /**********  Contact formspree  /**********/
+
+
+    .formspree_container {
+        transform: translateY(0px);
+        padding: 20px 0;
+    }
+
+    .contact_text {
+        width: 95%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -767,7 +813,8 @@ header {
 
     .inner_box .button,
     .attention_container .button,
-    .options_box .button  {
+    .options_box .button,
+    .contact_formspree .button {
         width: 120px;
         height: 30px;
         font-size: 0.7rem;
@@ -822,7 +869,22 @@ header {
 
     .opinion_text p::before {
         bottom: -5px;
-     
+    }
+
+
+    /**********  Contact formspree  /**********/
+
+
+    .contact_information {
+        flex-wrap: wrap;
+    }
+
+    .please_contact {
+        height: 200px;
+    }
+
+    .formspree_container p {
+        margin-top: 20px;
     }
 
 }
@@ -850,7 +912,9 @@ header {
     .attention_container .h_2,
     .our_services_container h2,
     .about_box h2,
-    .opinion_container h2 {
+    .opinion_container h2,
+    .please_contact h2,
+    .contact_box h3 {
         font-size: 1.5rem;
     }
 
@@ -931,9 +995,27 @@ header {
         margin: 10px 0;
     }
 
-    .opinion_text p {
+    .opinion_text p,
+    .contact_text .border_bottom,
+    .contact_text li {
         font-size: 1rem;
         line-height: 1.3;
+    }
+
+    .contact_text {
+        margin: 5px 0;
+    }
+
+    .formspree_box label {
+        font-size: 1rem;
+    }
+
+    .formspree_box input {
+        padding: 5px 0;
+    }
+
+    .contact_formspree .button {
+        margin-top: 0;
     }
 
 }
