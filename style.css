@@ -34,6 +34,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--dim_white);
+    padding: 10px 0;
 }
 
 .header_box {
@@ -80,19 +81,19 @@ header {
 
 
 .hamburger {
-    padding: 5px;
-    width: 35px;
-    height: 25px;
+    padding: 8px;
+    width: 40px;
+    height: 30px;
     cursor: pointer;
     border-radius: 5px;
-    background-color: var(--color);
+    background-color: rgb(20,20,20);
     display: none;
 }
 
 .bar {
     width: 100%;
     height: 2px;
-    background-color: rgb(20,20,20);
+    background-color: var(--color);
 }
 
 
@@ -831,6 +832,24 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: fixed;
+        right: 5px;
+    }
+
+    .bar {
+        transition: 0.5s;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(4px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
 
@@ -870,12 +889,21 @@ header {
     }
 
     .inner_box .button,
-    .attention_container .button,
     .options_box .button,
+    .attention_container .button,
     .contact_formspree .button {
         width: 120px;
         height: 30px;
         font-size: 0.7rem;
+    }
+
+    .attention_container .button {
+        display: inline-block;
+        width: 120px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
@@ -948,7 +976,7 @@ header {
 
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 386px) {
 
 
     header {
@@ -985,6 +1013,10 @@ header {
         width: 100%;
         border-radius: 5px;
         padding: 10px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 
